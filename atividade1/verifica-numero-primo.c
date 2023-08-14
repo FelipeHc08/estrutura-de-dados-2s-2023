@@ -21,10 +21,12 @@ int main(){
  }
     
     if (resultado == 0){
-        printf("1");
-    }
-    else
-        printf("0");
+    
+        printf("%d é primo!",&num);
+        
+    }else
+    
+        printf("%d não é primo!",&num);
  
- return 0;
+    return 0;
 }
