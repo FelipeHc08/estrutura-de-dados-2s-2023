@@ -22,11 +22,11 @@ int main(){
     
     if (resultado == 0){
     
-        printf("%d é primo!",&num);
+        printf("%d é primo!", num);
         
     }else
     
-        printf("%d não é primo!",&num);
+        printf("%d não é primo!", num);
  
     return 0;
 }
