@@ -42,19 +42,17 @@ int main() {
 
     
     for (int i = 0; i < contador; i++) {
-        somaX += valoresX[i];
-        somaY += valoresY[i];
         somaXY += valoresX[i] * valoresY[i];
         somaXQuadrado += valoresX[i] * valoresX[i];
     } 
 
     float coeficienteAngular = (contador * somaXY - somaX * somaY) / (contador * somaXQuadrado - somaX * somaX);
-    printf("\nCoeficiente Angular (Inclinação): %.2f\n", coeficienteAngular);
+    printf("\nCoeficiente Angular (Inclinação): %.1f\n", coeficienteAngular);
 
-    float interceptacao = mediaY - (coeficienteAngular * mediaX);
-    printf("\nCoeficiente linear (Interceptação): %.2f\n", interceptacao);
+    float interceptacao = mediaY - coeficienteAngular * mediaX;
+    printf("\nCoeficiente linear (Interceptação): %.1f\n", interceptacao);
 
-    printf("\nEquação da Regressão Linear: Y = %.2fX + %.2f\n", coeficienteAngular, interceptacao);
+    printf("\nEquação da Regressão Linear: Y = %.1fX + %.1f\n", coeficienteAngular, interceptacao);
 
     return 0;
 }
